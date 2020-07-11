@@ -139,13 +139,14 @@ public class AdventureMainCLI {
 		scrollingText = "       Welcome to...                                      ";
 		scrollTheTextSlowSpeed(scrollingText);
 		
-		String trenda = "  _______ _____  ______ _   _ _____          \r\n"
-				+ " |__   __|  __ \\|  ____| \\ | |  __ \\   /\\    \r\n"
-				+ "    | |  | |__) | |__  |  \\| | |  | | /  \\   \r\n"
-				+ "    | |  |  _  /|  __| | . ` | |  | |/ /\\ \\  \r\n"
-				+ "    | |  | | \\ \\| |____| |\\  | |__| / ____ \\ \r\n"
-				+ "    |_|  |_|  \\_\\______|_| \\_|_____/_/    \\_\\ ";
-		scrollTheTextMediumSpeed(trenda);
+		String cauven = "   _____              _    _  __      __  ______   _   _ \r\n" + 
+				"  / ____|     /\\     | |  | | \\ \\    / / |  ____| | \\ | |\r\n" + 
+				" | |         /  \\    | |  | |  \\ \\  / /  | |__    |  \\| |\r\n" + 
+				" | |        / /\\ \\   | |  | |   \\ \\/ /   |  __|   | . ` |\r\n" + 
+				" | |____   / ____ \\  | |__| |    \\  /    | |____  | |\\  |\r\n" + 
+				"  \\_____| /_/    \\_\\  \\____/      \\/     |______| |_| \\_|\r\n" + 
+				"                                                         ";
+		scrollTheTextMediumSpeed(cauven);
 		System.out.println("\n\n\n");
 		String scrollText = "\tA Zoudar Story ";
 		scrollTheTextSlowSpeed(scrollText);
@@ -155,7 +156,7 @@ public class AdventureMainCLI {
 		System.out.println("\tPress enter to continue");
 		input.nextLine();
 		controls();
-		System.out.println("\tPress enter to begin");
+		System.out.println("\tPress enter to continue");
 		input.nextLine();
 		clrscr();
 	}
@@ -186,6 +187,38 @@ public class AdventureMainCLI {
 		System.out.println("\n\n\n\n");
 	}
 
+	
+	public void backStory() throws InterruptedException {
+		String scrollingText = "Every celestial body has its first order threats. On this moon, Cauven, it's the birds.\n"
+				+ "Or maybe the trees. A dozen species of bird vie for the top of the food chain. A hundred species of\n"
+				+ "tree have developed poisonous defenses. The flightless creatures here are small, quick, and burrowing.\n"
+				+ "Small and quick to escape the birds, burrowing to avoid the trees. The birds survive mainly off each other.\n"
+				+ "All you know is that you need to watch out for things quick and things still.\n  ";
+		scrollTheTextFastSpeed(scrollingText);
+		
+		System.out.println("\tPress enter");
+		input.nextLine();
+		
+		scrollingText = "Most analog missions come with directions written on paper, landmark navigation. But this one calls for\n"
+				+ "collection. Tod birds are the size of a knuckle. Their miniscule feathers are coated with an oil that is\n"
+				+ "rumored to have some success in restoring partial vision after grolan attacks. Tods nest in the overstory of\n"
+				+ "grolan forests. Grolans are towering, spindly giants that sway in wind like kelp in water. It is the pulp\n"
+				+ "of the grolan tree that Doghoof has exploited and weaponized to sell to any buyers with a disdain for soldiers\n"
+				+ "of the Rame Gallery--like you and Pete.\n ";
+		scrollTheTextFastSpeed(scrollingText);
+		
+		System.out.println("\tPress enter");
+		input.nextLine();
+		
+		scrollingText = "Thus, the collection is twofold: collect as many tod birds as possible, and collect any intel on\n"
+				+ "Doghoof's activity in these forests.\n ";
+		scrollTheTextFastSpeed(scrollingText);
+		
+		System.out.println("\tPress enter to begin");
+		input.nextLine();
+		clrscr();
+	}
+	
 	public void gameOver(Stats stats) throws InterruptedException {
 		// show stats and end game
 		scrollingText = "You have perished on your journey to find your starship... ";
@@ -243,7 +276,7 @@ public class AdventureMainCLI {
 
 		music();
 		printTitleScreen(input);
-		
+		backStory();
 		printChapterOne();
 
 		newGame.moveAround(input, hero, stats, key);
