@@ -47,15 +47,15 @@ public class Enemy {
 	}
 
 	public List<Enemy> listOfEnemies() {
-		Enemy skeleton = new Enemy(75, 25, "Snorg");
-		Enemy zombie = new Enemy(75, 25, "Quonel");
-		Enemy warrior = new Enemy(75, 25, "Shearkazyx");
-		Enemy assassin = new Enemy(75, 25, "Trenlur");
+		Enemy snorg = new Enemy(75, 25, "Snorg");
+		Enemy quonel = new Enemy(75, 25, "Quonel");
+		Enemy shearkazyx = new Enemy(75, 25, "Shearkazyx");
+		Enemy trenlur = new Enemy(75, 25, "Trenlur");
 		List<Enemy> listOfEnemies = new ArrayList<Enemy>();
-		listOfEnemies.add(skeleton);
-		listOfEnemies.add(zombie);
-		listOfEnemies.add(warrior);
-		listOfEnemies.add(assassin);
+		listOfEnemies.add(snorg);
+		listOfEnemies.add(quonel);
+		listOfEnemies.add(shearkazyx);
+		listOfEnemies.add(trenlur);
 		return listOfEnemies;
 	}
 
@@ -190,15 +190,16 @@ public class Enemy {
 				scrollingText = " # Your bravery increased! # ";
 				cli.scrollTheTextMediumSpeed(scrollingText);
 			}
-			// random money drop
-			int moneyDropped = rand.nextInt(3);
-			hero.setTreasury(hero.getTreasury() + moneyDropped);
-			if (moneyDropped > 1) {
-				scrollingText = " # " + enemyName + " dropped " + moneyDropped
-						+ " pieces of silver, it's yours now! # ";
+			// random tod bird drop
+			int todBirdDrop = rand.nextInt(3);
+			hero.setTreasury(hero.getTreasury() + todBirdDrop);
+			if (todBirdDrop > 1) {
+				scrollingText = " #  As you inspect the " + enemyName + ", you find  " + todBirdDrop
+						+ " tod birds, passengers of the larger bird, have fallen to the ground. You put them in your pack. # ";
 				cli.scrollTheTextFastSpeed(scrollingText);
-			} else if (moneyDropped > 0) {
-				scrollingText = " # " + enemyName + " dropped " + moneyDropped + " piece of silver, it's yours now! # ";
+			} else if (todBirdDrop > 0) {
+				scrollingText = " # As you inspect the " + enemyName + ", you find " + todBirdDrop + " tod bird, a passenger of the larger bird"
+						+ ", has fallen to the ground. You put it in your pack. # ";
 				cli.scrollTheTextFastSpeed(scrollingText);
 			}
 			scrollingText = "------------------------------------------------------------------- ";

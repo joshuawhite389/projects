@@ -193,7 +193,10 @@ public class AdventureMainCLI {
 				+ "Or maybe the trees. A dozen species of bird vie for the top of the food chain. A hundred species of\n"
 				+ "tree have developed poisonous defenses. The flightless creatures here are small, quick, and burrowing.\n"
 				+ "Small and quick to escape the birds, burrowing to avoid the trees. The birds survive mainly off each other.\n"
-				+ "All you know is that you need to watch out for things quick and things still.\n  ";
+				+ "All you know is that you need to watch out for things quick and things still.\n\n"
+				+ "Because nature impedes technology here, today's mission calls for primitive skills. No one wanted it.\n"
+				+ "But you and Pete have wanted to see Cauven for months. Ever since Doghoof reappeared here and resuscitated\n"
+				+ "the grolan trade, and blindness in the solar system had increased threefold.\n ";
 		scrollTheTextFastSpeed(scrollingText);
 		
 		System.out.println("\tPress enter");

@@ -92,22 +92,20 @@ public class GameMap {
 		// each new Location will also contain exits, initialized in constructor
 		location.put(0, new GameMap(0, ""));
 		location.put(1,
-				new GameMap(1, "You're not exactly sure of your location, but you see a rickity wooden bridge to "
-						+ "\nyour west that will take you across the river."));
-		location.put(2, new GameMap(2, "Just west of the bridge near the crash site you see a line of trees. The "
-				+ "\nforest beyond looks dark."));
+				new GameMap(1, "You look out around the clearing. You have landed in an ink tree forest.\n"
+						+ "Ink trees secrete a black sap. When the sap dries, it crumbles into a feathery\n"
+						+ "powder that causes cardiac arrest if inhaled. You make a note not to touch any\n"
+						+ "sap, whether flowing or dry."));
+		location.put(2, new GameMap(2, "You are at the edge of the forest. Ink tree leaves are fanlike, and as\n"
+									+ "broad as sails. They are dark green, almost oil-black. The dark chlorophyll\n"
+									+ "is heavy with lead and interferes with your communications.  Lost men have\n"
+									+ "died of thirst here, found with fully functioning comms in their hands,\n"
+									+ "the signal hindered by the ink tree leaves. You must not lose track of your ship."));
 		location.put(3,
-				new GameMap(3,
-						"You enter the forest, it runs along the bank of the river. You know from "
-								+ "\nyour descent you need to head due north, but this terrain is tough. "
-								+ "\nIt looks like it won't be a straight shot."));
-		location.put(4, new GameMap(4, "In the dark forest you see what could be a path, or a game trail. "
-				+ "\nIt runs north and south, parallel to the river on your east."));
+				new GameMap(3, "3"));
+		location.put(4, new GameMap(4, "4"));
 		location.put(5,
-				new GameMap(5,
-						"You find yourself at the top of a large hill. You see the river to your east "
-								+ "\nand a bridge a bit north of your location. As you survey the landscape, "
-								+ "\nyou see multiple paths down the hill."));
+				new GameMap(5, "5"));
 		location.put(6, new GameMap(6, "6"));
 		location.put(7, new GameMap(7, "7"));
 		location.put(8, new GameMap(8, "8"));
@@ -116,7 +114,9 @@ public class GameMap {
 		location.put(11, new GameMap(11, "11"));
 		location.put(12, new GameMap(12, "12"));
 		location.put(13, new GameMap(13, "13"));
-		location.put(14, new GameMap(14, "14"));
+		location.put(14, new GameMap(14, "Up in the canopy, the nest of a Forvan bird shakes in the wind.\n"
+										+ "Forvans build their nests out of dry ivy and the toxic sap of\n"
+										+ "the ink tree. The nests are the size of a grown man."));
 		location.put(15, new GameMap(15, "15"));
 		location.put(16, new GameMap(16, "16"));
 		location.put(17, new GameMap(17, "17"));
@@ -358,7 +358,7 @@ public class GameMap {
 
 			currentLocation = theMap.get(beginningLocId);
 
-//			enemy.randomEnemyGenerator(hero, stats);
+			enemy.randomEnemyGenerator(hero, stats);
 
 		}
 	}
